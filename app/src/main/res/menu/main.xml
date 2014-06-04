@@ -2,9 +2,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.romanmitch.test.MainActivity" >
-    
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+
+
+    <item android:id="@+id/preset_locations"
+        android:title="Preset locations"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
+    <item android:id="@+id/stored_events"
+        android:title="Local stored events"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_settings"
+    android:title="@string/action_settings"
+    android:orderInCategory="100"
+    app:showAsAction="never" />
+
 </menu>
