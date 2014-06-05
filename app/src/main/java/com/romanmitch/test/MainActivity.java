@@ -1,5 +1,6 @@
 package com.romanmitch.test;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -19,6 +21,8 @@ public class MainActivity extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Code to respond to button clicks
         final Button btn1 = (Button)findViewById(R.id.button1);
         final Button btn2 = (Button)findViewById(R.id.button2);
         final Button btn3 = (Button)findViewById(R.id.button3);
@@ -72,7 +76,9 @@ public class MainActivity extends ActionBarActivity {
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Click 8!",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), "Click 8!",Toast.LENGTH_SHORT).show();
+                btn8.setVisibility(View.INVISIBLE);
+
             }
         });
     }
@@ -88,12 +94,13 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        //Intents for items in options menu
+        Intent i = new Intent(getApplicationContext(), Settings.class);
+
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Toast.makeText(getApplicationContext(), "Settings",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Settings",Toast.LENGTH_SHORT).show();
+                startActivity(i);
                 return true;
             case R.id.stored_events:
                 Toast.makeText(getApplicationContext(), "Stored Events",Toast.LENGTH_SHORT).show();
