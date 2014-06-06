@@ -14,6 +14,15 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    static String button1;
+    static String button2;
+    static String button3;
+    static String button4;
+    static String button5;
+    static String button6;
+    static String button7;
+    static String button8;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -22,7 +31,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Code to respond to button clicks
         final Button btn1 = (Button)findViewById(R.id.button1);
         final Button btn2 = (Button)findViewById(R.id.button2);
         final Button btn3 = (Button)findViewById(R.id.button3);
@@ -31,6 +39,9 @@ public class MainActivity extends ActionBarActivity {
         final Button btn6 = (Button)findViewById(R.id.button6);
         final Button btn7 = (Button)findViewById(R.id.button7);
         final Button btn8 = (Button)findViewById(R.id.button8);
+
+        //Code to respond to button clicks
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,8 +87,7 @@ public class MainActivity extends ActionBarActivity {
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Toast.makeText(getApplicationContext(), "Click 8!",Toast.LENGTH_SHORT).show();
-                btn8.setVisibility(View.INVISIBLE);
+               Toast.makeText(getApplicationContext(), "Click 8!",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -95,12 +105,12 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //Intents for items in options menu
-        Intent i = new Intent(getApplicationContext(), Settings.class);
+        Intent settings = new Intent(getApplicationContext(), Settings.class);
 
         switch (item.getItemId()) {
             case R.id.action_settings:
                 //Toast.makeText(getApplicationContext(), "Settings",Toast.LENGTH_SHORT).show();
-                startActivity(i);
+                startActivityForResult(settings, 0);
                 return true;
             case R.id.stored_events:
                 Toast.makeText(getApplicationContext(), "Stored Events",Toast.LENGTH_SHORT).show();
@@ -113,5 +123,22 @@ public class MainActivity extends ActionBarActivity {
         }
 
     }
+    protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0 && resultCode == RESULT_OK && data != null) {
+            button1 = data.getStringExtra(button1);
+            
+            final Button btn1 = (Button)findViewById(R.id.button1);
+           // final Button btn2 = (Button)findViewById(R.id.button2);
+            if (button1.trim().length() != 0) {
+                btn1.setVisibility(View.VISIBLE);
+                btn1.setText(button1);
+            }
+           /* if (button2.trim().length() != 0) {
+                btn2.setVisibility(View.VISIBLE);
+                btn2.setText(button2);
+            }*/
+        }
 
+
+    }
 }

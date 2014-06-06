@@ -20,16 +20,16 @@
             android:minHeight="80dp"
             android:layout_margin="10dp"
             android:textAlignment="center"
-            android:text="Button 1" />
+            android:visibility="invisible" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="New Button"
             android:id="@+id/button2"
             android:layout_weight="1"
             android:minHeight="80dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
@@ -45,20 +45,20 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="New Button"
             android:id="@+id/button3"
             android:layout_weight="1"
             android:minHeight="80dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="New Button"
             android:id="@+id/button4"
             android:layout_weight="1"
             android:minHeight="80dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -72,20 +72,20 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="New Button"
             android:id="@+id/button5"
             android:layout_weight="1"
             android:minHeight="80dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="New Button"
             android:id="@+id/button6"
             android:layout_weight="1"
             android:minHeight="80dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,21 +99,20 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="New Button"
             android:id="@+id/button7"
             android:layout_weight="1"
             android:minHeight="80dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:visibility="invisible" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="New Button"
             android:id="@+id/button8"
             android:layout_weight="1"
             android:minHeight="80dp"
             android:layout_margin="10dp"
-            android:visibility="visible" />
+            android:visibility="invisible" />
     </LinearLayout>
 
 </LinearLayout>
