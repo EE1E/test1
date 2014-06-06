@@ -126,7 +126,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
         if (requestCode == 0 && resultCode == RESULT_OK && data != null) {
             button1 = data.getStringExtra(button1);
-            
+
             final Button btn1 = (Button)findViewById(R.id.button1);
            // final Button btn2 = (Button)findViewById(R.id.button2);
             if (button1.trim().length() != 0) {
